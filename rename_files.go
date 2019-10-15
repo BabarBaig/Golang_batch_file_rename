@@ -20,8 +20,7 @@ func changeDir() {
 		scanner := bufio.NewScanner(file)
 		scanner.Scan()
 		dirDest = scanner.Text()
-		file.Close()
-		fmt.Println("Do you want to switch to dir [" + dirDest + "]? [y, n, eXit]: ")
+		fmt.Print("Do you want to switch to dir [" + dirDest + "]? [y, n, eXit]: ")
 		resp, _ := reader.ReadString('\n')
 		resp = strings.ToLower(resp)
 		if resp[0] == 'x' {
@@ -33,6 +32,7 @@ func changeDir() {
 		}
 	}
 
+	file.Close()
 	fmt.Print("Enter directory:\t")
 	dirDest, _ = reader.ReadString('\n')
 	dirDest = dirDest[:len(dirDest)-2]
@@ -76,5 +76,10 @@ func main() {
 	fmt.Println("This program looks for a search string in file names and replaces it " +
 		"with a replacement string.")
 	changeDir()
-	renameFiles()
+	reader := bufio.NewReader(os.Stdin)
+	for {
+		renameFiles()
+		fmt.Println("Press any key to continue, CTRL-c to eXit: ")
+		reader.ReadString('\n')
+	}
 }
