@@ -1,4 +1,4 @@
-# Golang_batch_file_rename
+# Golang_batch_rename_file
 
 This program looks for a search_string in filenames and replaces it with a dest_string.<br>
 It's helpful where a large number of files have to be renamed, making manual renaming impractical.<br>
