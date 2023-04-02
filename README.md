@@ -8,4 +8,4 @@ This allows for convenient multi-step renaming of files, progressively renaming 
 <br>
 To generate a WINDOWS 11, 64 bit executable on replit, use the following command:
 
-    GOOS=windows GOARCH=amd64 go build -o rename_files.exe
+    GOOS=windows GOARCH=amd64 go build -o 000_rename_files.exe
