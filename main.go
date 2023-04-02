@@ -46,10 +46,10 @@ func renameFiles() {
 	fnameCur := ""
 	fnameNew := ""
 
-	for _, f := range files {
-		fnameCur = f.Name()
-		fmt.Println(fnameCur)
-	}
+	// for _, f := range files {
+	// 	fnameCur = f.Name()
+	// 	fmt.Println(fnameCur)
+	// }
 
 	fmt.Println("Replace a search string [srchStr], with replacement string [replStr]")
 	fmt.Print("Enter srchStr:\t")
