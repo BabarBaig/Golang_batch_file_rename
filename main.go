@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	fmt.Println("This program looks for a search string in file names and replaces it " +
-		"with a replacement string.")
+	fmt.Println("This program looks for a [search_string] in file names and replaces it " +
+		"with a [replacement_string].")
 	changeDir()
 	reader := bufio.NewReader(os.Stdin)
 	for {
