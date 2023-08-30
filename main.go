@@ -8,6 +8,18 @@ import (
 	"strings"
 )
 
+func main() {
+	fmt.Println("This program looks for a search string in file names and replaces it " +
+		"with a replacement string.")
+	changeDir()
+	reader := bufio.NewReader(os.Stdin)
+	for {
+		renameFiles()
+		fmt.Println("Press any key to continue, CTRL-c to eXit: ")
+		reader.ReadString('\n')
+	}
+}
+
 func changeDir() {
 	dirDest := ""
 	reader := bufio.NewReader(os.Stdin)
@@ -56,17 +68,5 @@ func renameFiles() {
       fmt.Println("Err: ", e.Err)
       fmt.Println("Does file [" + fnameNew + "] already exist?")
     }
-	}
-}
-
-func main() {
-	fmt.Println("This program looks for a search string in file names and replaces it " +
-		"with a replacement string.")
-	changeDir()
-	reader := bufio.NewReader(os.Stdin)
-	for {
-		renameFiles()
-		fmt.Println("Press any key to continue, CTRL-c to eXit: ")
-		reader.ReadString('\n')
 	}
 }
