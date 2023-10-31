@@ -1,10 +1,10 @@
 package main
 /*
-go build -o rename_files.exe main.go
+$ go build -o rename_files.exe main.go
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To build on Replit: (fails sometimes)
-GOOS=windows GOARCH=amd64 go run   rename_files.go
-GOOS=windows GOARCH=amd64 go build rename_files.go
+$ GOOS=windows GOARCH=amd64 go run   rename_files.go
+$ GOOS=windows GOARCH=amd64 go build rename_files.go
 */
 import (
 	"bufio"
